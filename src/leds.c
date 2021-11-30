@@ -1,10 +1,14 @@
 #include "leds.h"
 #include "errores.h"
 
+/*Definiciones de constantes*/
+
 #define LEDS_ALL_OFF 0x0000
 #define LEDS_ALL_ON 0xFFFF
 #define LEDS_OFFSET 1
 #define LED_ON_STATE 1
+
+/*Variables globales */
 static uint16_t *puerto;
 
 

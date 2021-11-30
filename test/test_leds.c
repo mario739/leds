@@ -1,19 +1,15 @@
 #include "unity.h"
 #include "leds.h"
 #include "mock_errores.h"
-/*
- * Consultar el estado de un led apagado 
- * Colsultar el estado de un led encendido 
- * Revisar los valores limites de los parametros
- * Probar valores invalidos para los parametros 
 
-*/
-
+/*Definiciones de constantes*/
 #define LED 3
 #define LED_BIT(x) (1<<(x-1))
 
+    /*Variables globales */
 static uint16_t puertoVirtual;
 
+    /*Funcion añade el codigo al inicio de cada test*/
 void setUp(void)
 {
        LedsCreate(&puertoVirtual);
@@ -78,7 +74,6 @@ void test_apagar_todos_los_leds_juntos(void)
     LedsOn(LED);
     LedsState(LED);
 }
-
 
 /* Probar valores invalidos para los parametros */
 
